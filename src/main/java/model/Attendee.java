@@ -3,6 +3,7 @@ package model;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+import view.Phone;
 
 import javax.validation.constraints.Size;
 
@@ -14,6 +15,18 @@ public class Attendee {
     @NotEmpty
     @Email
     private String emailAddress;
+
+    @Phone
+    @NotEmpty
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getName() {
         return name;
